@@ -1,0 +1,4 @@
+# ignore all bin, .metadata directories and files
+bin/
+.metadata/
+*~

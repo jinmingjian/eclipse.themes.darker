@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.e4.ui.css.swt.theme">
+      <theme
+            basestylesheeturi="themes/css/darker.css"
+            id="eclipse.themes.darker.theme"
+            label="Darker Theme">
+      </theme>
+   </extension>
+   <extension
+         point="org.eclipse.e4.ui.css.core.propertyHandler">
+      <handler
+            adapter="org.eclipse.e4.ui.css.swt.dom.ButtonElement"
+            handler="eclipse.themes.darker.CSSPropertyDarkerButtonBackgroundColorHandler">
+         <property-name
+               name="darker-button-background-color">
+         </property-name>
+      </handler>
+   </extension>
+   <extension
+         id="id1"
+         point="org.eclipse.e4.workbench.model">
+      <processor
+            beforefragment="true"
+            class="eclipse.themes.darker.DarkerThemer">
+      </processor>
+   </extension>
+
+</plugin>
