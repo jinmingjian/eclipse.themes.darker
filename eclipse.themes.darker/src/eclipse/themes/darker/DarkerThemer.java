@@ -19,6 +19,8 @@ public class DarkerThemer {
 
 	// The darker theme ID
 	public static final String THEME_DARKER_ID = "eclipse.themes.darker.theme"; //$NON-NLS-1$
+	//
+	private static final String THEME_DARKER_PREF_THEMEENABLED = "eclipse.themes.darker.theme_enabled"; //$NON-NLS-1$
 
 	public static final String[] PREF_UI_KEYS = {
 			"AbstractTextEditor.Color.SelectionForeground.SystemDefault",
@@ -81,7 +83,9 @@ public class DarkerThemer {
 	@Inject
 	IEventBroker eventBroker;
 
-	private IEclipsePreferences prefUI, prefJDT;
+	private IEclipsePreferences prefDarker, prefJDT, prefUI;
+	
+	private boolean isLastThemeDarker = false;
 
 	@Execute
 	public void onExecute() {
@@ -90,9 +94,12 @@ public class DarkerThemer {
 					public void handleEvent(Event event) {
 						ITheme currentTheme = (ITheme) event
 								.getProperty(IThemeEngine.Events.THEME);
-						if (currentTheme.getId().equals(THEME_DARKER_ID)) {
+						if (currentTheme.getId().equals(THEME_DARKER_ID) &&
+								!prefDarker.getBoolean(
+										THEME_DARKER_PREF_THEMEENABLED, false)) {
 							setupPreferences();
-						} else {
+							isLastThemeDarker = true;
+						} else if (isLastThemeDarker) {
 							setToDefaultPreferences();
 						}
 
@@ -102,10 +109,12 @@ public class DarkerThemer {
 
 	@Inject
 	private void setPrefReferences(
+			@Preference(nodePath = Activator.PLUGIN_ID) IEclipsePreferences prefDarker,
 			@Preference(nodePath = "org.eclipse.ui.editors") IEclipsePreferences prefUI,
 			@Preference(nodePath = "org.eclipse.jdt.ui") IEclipsePreferences prefJDT) {
 		this.prefUI = prefUI;
 		this.prefJDT = prefJDT;
+		this.prefDarker = prefDarker;
 	}
 
 	private void setupPreferences() {
@@ -206,13 +215,18 @@ public class DarkerThemer {
 		prefJDT.put("semanticHighlighting.typeParameter.color", "205,177,173");
 		prefJDT.putBoolean("semanticHighlighting.typeParameter.enabled", true);
 
+		prefDarker.putBoolean(
+				THEME_DARKER_PREF_THEMEENABLED, true);
+		
 		try {
 			prefUI.sync();
 			prefJDT.sync();
+			prefDarker.flush();
 		} catch (BackingStoreException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 	}
 
 	private void setToDefaultPreferences() {
@@ -223,6 +237,15 @@ public class DarkerThemer {
 		for (String key : PREF_JDT_KEYS)
 			((AbstractUIPlugin) Platform.getPlugin("org.eclipse.jdt.ui"))
 					.getPreferenceStore().setToDefault(key);
+		
+		try {
+ 			prefDarker.putBoolean(
+					THEME_DARKER_PREF_THEMEENABLED, false);
+			prefDarker.sync();
+		} catch (BackingStoreException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
