@@ -6,7 +6,7 @@ A dark theme for Eclipse 4.2+.
 It intends to provide the experience like shown in the IDEA 12's darcula theme(experhttp://blogs.jetbrains.com/idea/wp-content/uploads/2012/12/darcula-1.png) experimentally.
 
 ## Update
-# an update site will come soon:)
+* [2012-12-28] - an update site will come soon:)
 
 ## Philosophy of this plugin projects is:
 ### Out-of-box.
