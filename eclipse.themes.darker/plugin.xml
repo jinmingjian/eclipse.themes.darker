@@ -8,6 +8,15 @@
             id="eclipse.themes.darker.theme"
             label="Darker Theme">
       </theme>
+      <stylesheet
+            uri="themes/css/darker.css">
+         <osgiresourcelocator
+               uri="platform:/plugin/eclipse.themes.darker/themes/css/">
+         </osgiresourcelocator>
+         <themeid
+               refid="eclipse.themes.darker.theme">
+         </themeid>
+      </stylesheet>
    </extension>
    <extension
          point="org.eclipse.e4.ui.css.core.propertyHandler">
