@@ -94,14 +94,14 @@ public class DarkerThemer {
 					public void handleEvent(Event event) {
 						ITheme currentTheme = (ITheme) event
 								.getProperty(IThemeEngine.Events.THEME);
-						if (currentTheme.getId().equals(THEME_DARKER_ID) &&
-								!prefDarker.getBoolean(
-										THEME_DARKER_PREF_THEMEENABLED, false)) {
-							setupPreferences();
-							isLastThemeDarker = true;
-						} else if (isLastThemeDarker) {
-							setToDefaultPreferences();
-						}
+						if (!prefDarker.getBoolean(
+								THEME_DARKER_PREF_THEMEENABLED, false))
+							if (currentTheme.getId().equals(THEME_DARKER_ID)) {
+								setupPreferences();
+								isLastThemeDarker = true;
+							} else if (isLastThemeDarker) {
+								setToDefaultPreferences();
+							}
 
 					}
 				});
