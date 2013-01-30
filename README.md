@@ -6,8 +6,13 @@ A dark theme for Eclipse 4.2+.
 It intends to provide the experience like shown in the IDEA 12's darcula theme(experhttp://blogs.jetbrains.com/idea/wp-content/uploads/2012/12/darcula-1.png) experimentally.
 
 ## Update
+* [2013-01-30] - long-waiting update site added:)
 * [2013-01-02] - thanks to [John](https://github.com/jeckhart)'s update site configurations.
 * [2012-12-28] - an update site will come soon:)
+
+## Update site for the darker plugin
+<pre>http://jinmingjian.github.com/updatesite/</pre>
+* Consult [the wiki page](https://github.com/jinmingjian/eclipse.themes.darker/wiki/How-to-Build-a-Local-Update-site-for-Consuming-Your-Own-modifications) about how to use update site to install the plugin or ask Google:)
 
 ## Philosophy of this plugin projects is:
 ### Out-of-box.
