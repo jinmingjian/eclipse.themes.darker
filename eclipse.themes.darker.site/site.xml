@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <description name="Eclipse Darker Theme" url="http://jeckhart.github.com/eclipse.themes.darker">
+   <description name="Eclipse Darker Theme" url="http://jinmingjian.github.com/updatesite">
       The Eclipse Darker Theme by Jin Mingjian.
    </description>
    <feature url="features/eclipse.themes.darker.feature_1.0.0.qualifier.jar" id="eclipse.themes.darker.feature" version="1.0.0.qualifier">
