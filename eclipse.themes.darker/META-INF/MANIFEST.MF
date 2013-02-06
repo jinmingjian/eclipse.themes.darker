@@ -5,20 +5,16 @@ Bundle-SymbolicName: eclipse.themes.darker;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: eclipse.themes.darker.Activator
 Bundle-Vendor: Jin Mingjian
-Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime,
- org.eclipse.e4.ui.css.swt;bundle-version="0.10.2",
- org.eclipse.e4.ui.css.swt.theme,
- org.eclipse.e4.ui.css.core;bundle-version="0.10.2",
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.osgi.services,
  org.eclipse.e4.core.di,
- org.eclipse.e4.ui.services,
  org.eclipse.e4.core.contexts,
- org.eclipse.e4.ui.workbench,
- org.eclipse.ui.workbench,
- org.eclipse.e4.ui.css.swt.theme,
- org.eclipse.e4.ui.css.swt.theme,
- org.eclipse.osgi.services;bundle-version="3.3.100",
- org.eclipse.ui.workbench
+ org.eclipse.ui,
+ org.eclipse.e4.ui.css.swt,
+ org.eclipse.e4.ui.css.core,
+ org.eclipse.e4.ui.css.swt.theme;bundle-version="0.9.100",
+ org.eclipse.e4.ui.services,
+ org.eclipse.e4.ui.workbench
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Import-Package: javax.inject,
