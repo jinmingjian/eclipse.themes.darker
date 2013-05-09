@@ -1,4 +1,4 @@
-package eclipse.themes.darker;
+package eclipse.themes.darker.ui;
 
 import org.eclipse.e4.ui.css.core.dom.properties.ICSSPropertyHandler;
 import org.eclipse.e4.ui.css.core.engine.CSSEngine;

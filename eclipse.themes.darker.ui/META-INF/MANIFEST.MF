@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Darker Theme For Eclipse 4.2 or higher
-Bundle-SymbolicName: eclipse.themes.darker;singleton:=true
-Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: eclipse.themes.darker.Activator
+Bundle-Name: Darker Theme UI Bundle
+Bundle-SymbolicName: eclipse.themes.darker.ui;singleton:=true
+Bundle-Version: 1.1.0.qualifier
+Bundle-Activator: eclipse.themes.darker.ui.Activator
 Bundle-Vendor: Jin Mingjian
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.osgi.services,
@@ -14,7 +14,10 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.e4.ui.css.core,
  org.eclipse.e4.ui.css.swt.theme,
  org.eclipse.e4.ui.services,
- org.eclipse.e4.ui.workbench
+ org.eclipse.e4.ui.workbench,
+ org.eclipse.osgi,
+ org.eclipse.osgi,
+ eclipse.themes.darker.core
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Import-Package: javax.inject,

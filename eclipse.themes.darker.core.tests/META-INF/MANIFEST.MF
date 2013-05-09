@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tests Fragment for Darker Core
+Bundle-SymbolicName: eclipse.themes.darker.core.tests
+Bundle-Version: 1.0.0.qualifier
+Fragment-Host: eclipse.themes.darker.core
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.junit;bundle-version="4.11.0",
+ org.eclipse.swt;bundle-version="3.101.0"
+Bundle-ClassPath: .

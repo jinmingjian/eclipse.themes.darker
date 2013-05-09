@@ -2,7 +2,7 @@
 <feature
       id="eclipse.themes.darker.feature"
       label="Eclipse Darker Theme"
-      version="1.0.0.qualifier"
+      version="1.1.0.qualifier"
       plugin="eclipse.themes.darker">
 
    <description url="https://github.com/jinmingjian/eclipse.themes.darker">
@@ -87,21 +87,23 @@ This Agreement is governed by the laws of the State of New York and the intellec
    </license>
 
    <url>
-      <update label="Eclipse Darker Theme" url="http://jinmingjian.github.com/updatesite"/>
+      <update label="Eclipse Darker Theme" url="http://jinmingjian.github.io/updatesite"/>
    </url>
 
    <requires>
-      <import plugin="org.eclipse.ui"/>
-      <import plugin="org.eclipse.core.runtime"/>
-      <import plugin="org.eclipse.e4.ui.css.swt" version="0.10.2" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.e4.ui.css.swt.theme"/>
-      <import plugin="org.eclipse.e4.ui.css.core" version="0.10.2" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.e4.core.di"/>
-      <import plugin="org.eclipse.e4.ui.services"/>
-      <import plugin="org.eclipse.e4.core.contexts"/>
-      <import plugin="org.eclipse.e4.ui.workbench"/>
-      <import plugin="org.eclipse.ui.workbench"/>
+      <import plugin="org.objectweb.asm" version="3.3.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.osgi"/>
+      <import plugin="org.eclipse.equinox.ds" version="1.4.100" match="greaterOrEqual"/>
       <import plugin="org.eclipse.osgi.services" version="3.3.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.e4.core.di"/>
+      <import plugin="org.eclipse.e4.core.contexts"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.e4.ui.css.swt" version="0.10.2" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.ui.css.core" version="0.10.2" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.ui.css.swt.theme"/>
+      <import plugin="org.eclipse.e4.ui.services"/>
+      <import plugin="org.eclipse.e4.ui.workbench"/>
       <import plugin="javax.inject"/>
       <import plugin="org.eclipse.e4.core.di.extensions"/>
       <import plugin="org.eclipse.e4.core.services"/>
@@ -109,7 +111,14 @@ This Agreement is governed by the laws of the State of New York and the intellec
    </requires>
 
    <plugin
-         id="eclipse.themes.darker"
+         id="eclipse.themes.darker.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="eclipse.themes.darker.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"

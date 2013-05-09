@@ -11,7 +11,7 @@
       <stylesheet
             uri="themes/css/darker.css">
          <osgiresourcelocator
-               uri="platform:/plugin/eclipse.themes.darker/themes/css/">
+               uri="platform:/plugin/eclipse.themes.darker.ui/themes/css/">
          </osgiresourcelocator>
          <themeid
                refid="eclipse.themes.darker.theme">
@@ -22,7 +22,7 @@
          point="org.eclipse.e4.ui.css.core.propertyHandler">
       <handler
             adapter="org.eclipse.e4.ui.css.swt.dom.ButtonElement"
-            handler="eclipse.themes.darker.CSSPropertyDarkerButtonBackgroundColorHandler">
+            handler="eclipse.themes.darker.ui.CSSPropertyDarkerButtonBackgroundColorHandler">
          <property-name
                name="darker-button-background-color">
          </property-name>
@@ -33,7 +33,7 @@
          point="org.eclipse.e4.workbench.model">
       <processor
             beforefragment="true"
-            class="eclipse.themes.darker.DarkerThemer">
+            class="eclipse.themes.darker.ui.DarkerThemer">
       </processor>
    </extension>
 

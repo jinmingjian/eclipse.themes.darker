@@ -1,4 +1,4 @@
-package eclipse.themes.darker;
+package eclipse.themes.darker.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
@@ -6,11 +6,10 @@ import org.osgi.framework.BundleContext;
 /**
  * The activator class controls the plug-in life cycle
  */
-@SuppressWarnings("restriction")
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "eclipse.themes.darker"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "eclipse.themes.darker.ui"; //$NON-NLS-1$
 
 	// The shared instance
 	private static Activator plugin;

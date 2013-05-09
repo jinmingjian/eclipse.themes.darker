@@ -72,6 +72,11 @@
 	color: #FFF;
 }
 
+#SearchField Text { 
+	background-color: #333;
+	color: #FFF;
+}
+
 CTabFolder {
 	swt-tab-renderer: null;
 	swt-simple: true;
@@ -101,10 +106,20 @@ CTabItem:selected {
 }
 
 ToolBar {
-	color: #DDD;
+	color: #FFF;
 }
 
+#org-eclipse-ui-ProgressBar Canvas {
+	color: #FFF;
+}
+
+
 /*
+Text {
+	background-color: #333;
+	color: #FFF;
+}
+
 Shell {
 	background-color: #333;
 	color: #DDD;

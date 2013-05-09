@@ -1,4 +1,4 @@
-package eclipse.themes.darker;
+package eclipse.themes.darker.ui;
 
 //TODO: move all handed strings to here 
 public interface ThemeConstants {
