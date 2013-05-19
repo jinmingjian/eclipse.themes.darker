@@ -1,5 +1,5 @@
 # ignore all bin, .metadata directories and files
 bin/
 .metadata/
+target/
 eclipse.themes.darker.site/**.jar
-*~
