@@ -23,6 +23,10 @@ NOTE: I have not enough bandwith now to add a full-fledged configuration for it.
 ### Simplest to consume(for end users) or contribute(for devs).
 ### shows the bleeding edge sides of the Eclipse 4.x platform
 
+## Building the plugin using maven
+
+The plugin has support for headless maven/tycho builds. Simply run `mvn clean install` in the projects root directory.
+
 ## References:
 * https://github.com/eclipse-color-theme/eclipse-ui-themes
 * http://wiki.eclipse.org/E4/CSS
